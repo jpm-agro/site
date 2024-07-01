@@ -1,0 +1,230 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #3c643f;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #3c643f;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    max-height: 60px;
+}
+
+header nav {
+    position: relative;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #a65f31;
+    border-radius: 5px;
+}
+
+header .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+#carousel {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: none;
+    height: 100%;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    text-align: center;
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+section {
+    padding: 40px 0;
+}
+
+section .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #a65f31;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #3c643f;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #a65f31;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #3c643f;
+}
+
+footer {
+    background-color: #3c643f;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+
+    header nav ul.show {
+        display: flex;
+    }
+
+    header .nav-toggle {
+        display: block;
+    }
+
+    .team {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        max-width: 100%;
+    }
+
+    section .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
